@@ -7,16 +7,9 @@ from keytotext import pipeline
 ############
 st.write("# Code for Keywords to Text")
 
-#st.code(body='''keywords = st_tags(
-#    label='# Enter Keywords:',
-#    text='Press enter to add more',
-#    value=['Zero', 'One', 'Two'],
-#    suggestions=['five', 'six', 'seven', 'eight', 'nine', 'three', 'eleven', 'ten', 'four'],
-#    maxtags = 4,
-#    key='1')''',
-#        language="python")
-
 st.markdown("***Idea is to build a model which will take keywords as inputs and generate sentences as outputs.***")
+image = Image.open('1.png')
+st.image(image)
         
 st.sidebar.write("# Parameter Selection")
 maxtags_sidebar = st.sidebar.slider('Number of tags allowed?', 1, 10, 3, key='ehikwegrjifbwreuk')
@@ -27,12 +20,6 @@ keywords = st_tags(
     suggestions=['five', 'six', 'seven', 'eight', 'nine', 'three', 'eleven', 'ten', 'four'],
     maxtags=maxtags_sidebar,
     key="aljnf")
-
-
-
-##########
-## sidebar
-##########
 
 # Add selectbox in streamlit
 option = st.sidebar.selectbox(
