@@ -2,4 +2,4 @@ streamlit==0.82.0
 streamlit_tags
 pyarrow
 keytotext
-cv2
+opencv-python
