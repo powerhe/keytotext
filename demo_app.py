@@ -7,52 +7,46 @@ from keytotext import pipeline
 ############
 st.write("# Code for Keywords to Text")
 
-st.code(body='''keywords = st_tags(
-    label='# Enter Keywords:',
-    text='Press enter to add more',
-    value=['Zero', 'One', 'Two'],
-    suggestions=['five', 'six', 'seven', 'eight', 'nine', 'three', 'eleven', 'ten', 'four'],
-    maxtags = 4,
-    key='1')''',
-        language="python")
+#st.code(body='''keywords = st_tags(
+#    label='# Enter Keywords:',
+#    text='Press enter to add more',
+#    value=['Zero', 'One', 'Two'],
+#    suggestions=['five', 'six', 'seven', 'eight', 'nine', 'three', 'eleven', 'ten', 'four'],
+#    maxtags = 4,
+#    key='1')''',
+#        language="python")
 
-maxtags = st.slider('Number of tags allowed?', 1, 10, 3, key='jfnkerrnfvikwqejn')
-
+st.text('
+        Idea is to build a model which will take keywords as inputs and generate sentences as outputs.
+        Potential use case can include:
+        - Marketing
+        - Search Engine Optimization
+        - Topic generation etc.
+        - Fine tuning of topic modeling models
+        ')
+        
+maxtags_sidebar = st.sidebar.slider('Number of tags allowed?', 1, 10, 3, key='ehikwegrjifbwreuk')
 keywords = st_tags(
     label='# Enter Keywords:',
     text='Press enter to add more',
     value=['Zero', 'One', 'Two'],
     suggestions=['five', 'six', 'seven', 'eight', 'nine', 'three', 'eleven', 'ten', 'four'],
-    maxtags=maxtags,
+    maxtags=maxtags_sidebar,
     key="aljnf")
 
-st.write("### Results:")
+st.write("## Results:")
 
 ##########
 ## sidebar
 ##########
-st.sidebar.write("# Code for Keywords to Text sidebar")
+st.sidebar.write("# Parameter Selection")
 
-st.sidebar.code(body='''keyword = st_tags_sidebar(
-label='# Enter Keywords:',
-text='Press enter to add more',
-value=['Zero', 'One', 'Two'],
-suggestions=['five', 'six', 'seven', 
-'eight', 'nine', 'three', 
-'eleven', 'ten', 'four'],
-maxtags = 4)''',
-                language="python")
+# Add selectbox in streamlit
+option = st.selectbox(
+     'Which model would you like to be selected?',
+     ('k2t', 'k2t-base', 'mrm8488/t5-base-finetuned-common_gen'))
 
-maxtags_sidebar = st.sidebar.slider('Number of tags allowed?', 1, 10, 3, key='ehikwegrjifbwreuk')
-
-keyword = st_tags_sidebar(label='# Enter Keywords:',
-                          text='Press enter to add more',
-                          value=['Zero', 'One', 'Two'],
-                          suggestions=['five', 'six', 'seven', 'eight', 'nine', 'three', 'eleven', 'ten', 'four'],
-                          maxtags=maxtags_sidebar,
-                          key="afrfae")
-
-nlp=pipeline("k2t")
 if st.button('Text Generation'):
+    nlp=pipeline(option)
     out=nlp(keywords)
     st.write(out)
