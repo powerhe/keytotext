@@ -2,5 +2,4 @@ streamlit==0.82.0
 streamlit_tags
 pyarrow
 keytotext
-opencv-python
-libgl1-mesa-glx
+opencv-python-headless
