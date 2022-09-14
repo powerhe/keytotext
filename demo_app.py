@@ -29,7 +29,7 @@ option = st.sidebar.selectbox(
 
 if st.sidebar.button('Load Model'):
     nlp=pipeline(option)
-    st.write("Load Successfully!")
+    st.sidebar.success("Load Successfully!")
 
 if st.button('Generate Text'):
     out=nlp(keywords)
