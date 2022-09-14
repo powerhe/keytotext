@@ -16,7 +16,7 @@ st.write("# Code for Keywords to Text")
 #    key='1')''',
 #        language="python")
 
-st.text('## Idea is to build a model which will take keywords as inputs and generate sentences as outputs.')
+st.text_area('Idea is to build a model which will take keywords as inputs and generate sentences as outputs.')
         
 st.sidebar.write("# Parameter Selection")
 maxtags_sidebar = st.sidebar.slider('Number of tags allowed?', 1, 10, 3, key='ehikwegrjifbwreuk')
