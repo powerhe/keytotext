@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_tags import st_tags, st_tags_sidebar
 from keytotext import pipeline
+from PIL import Image
 
 ############
 ## Main page
@@ -26,7 +27,7 @@ option = st.sidebar.selectbox(
      'Which model would you like to be selected?',
      ('k2t', 'k2t-base', 'mrm8488/t5-base-finetuned-common_gen'))
 
-if st.button('Load Model'):
+if st.sidebar.button('Load Model'):
     nlp=pipeline(option)
     st.write("Load Successfully!")
 
