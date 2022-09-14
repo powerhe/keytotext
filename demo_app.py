@@ -16,8 +16,7 @@ st.write("# Code for Keywords to Text")
 #    key='1')''',
 #        language="python")
 
-st.text('
-        Idea is to build a model which will take keywords as inputs and generate sentences as outputs. \n
+st.text('Idea is to build a model which will take keywords as inputs and generate sentences as outputs. \n
         Potential use case can include: \n
         - Marketing \n
         - Search Engine Optimization \n
