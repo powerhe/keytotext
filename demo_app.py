@@ -27,12 +27,14 @@ option = st.sidebar.selectbox(
      'Which model would you like to be selected?',
      ('k2t', 'k2t-base', 'mrm8488/t5-base-finetuned-common_gen'))
 
-if st.sidebar.button('Load Model'):
-    nlp=pipeline(option)
-    st.sidebar.success("Load Successfully!")
+#if st.sidebar.button('Load Model'):
+#    nlp=pipeline(option)
+#    st.sidebar.success("Load Successfully!")
 
-    if st.button('Generate Text'):
-        out=nlp(keywords)
-        st.write(out)
+if st.button('Generate Text'):
+    nlp=pipeline(option)
+    st.success("Load Successfully!")
+    out=nlp(keywords)
+    st.success(out)
 
 st.write("## Results:")
