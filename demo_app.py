@@ -28,7 +28,7 @@ keywords = st_tags(
     maxtags=maxtags_sidebar,
     key="aljnf")
 
-st.write("## Results:")
+
 
 ##########
 ## sidebar
@@ -43,3 +43,5 @@ if st.button('Text Generation'):
     nlp=pipeline(option)
     out=nlp(keywords)
     st.write(out)
+
+st.write("## Results:")
