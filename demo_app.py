@@ -16,12 +16,7 @@ st.write("# Code for Keywords to Text")
 #    key='1')''',
 #        language="python")
 
-st.text('Idea is to build a model which will take keywords as inputs and generate sentences as outputs. \n
-        Potential use case can include: \n
-        - Marketing \n
-        - Search Engine Optimization \n
-        - Topic generation etc. \n
-        - Fine tuning of topic modeling models \n')
+st.text('Idea is to build a model which will take keywords as inputs and generate sentences as outputs.')
         
 maxtags_sidebar = st.sidebar.slider('Number of tags allowed?', 1, 10, 3, key='ehikwegrjifbwreuk')
 keywords = st_tags(
