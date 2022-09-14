@@ -1,0 +1,38 @@
+html {
+    font-family: var(--font) !important;
+}
+
+.rti--container {
+  max-width: inherit;
+  --rti-tag: var(--primary-color) !important;
+  background-color: var(--secondary-background-color);
+  font: var(--font);
+}
+body{
+    color: var(--text-color);
+    background-color: inherit !important;
+    font: var(--font);
+}
+h3{
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+span{
+    color: #ffffff;
+    font: var(--font);
+}
+button{
+    color: #ffffff
+}
+.rti--input {
+    background-color: var(--secondary-background-color);
+    color: var(--text-color) !important;
+}
+.rah-hint{
+    color: var(--text-color) !important;
+    opacity: 0.8;
+}
+.rah-hint-wrapper{
+    color: var(--text-color) !important;
+    opacity: 0.8;
+}
