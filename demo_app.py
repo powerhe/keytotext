@@ -23,7 +23,7 @@ maxtags_sidebar = st.sidebar.slider('Number of tags allowed?', 1, 10, 3, key='eh
 keywords = st_tags(
     label='# Enter Keywords:',
     text='Press enter to add more',
-    value=['Zero', 'One', 'Two'],
+    value=['Summer', 'Shoes', 'Sports'],
     suggestions=['five', 'six', 'seven', 'eight', 'nine', 'three', 'eleven', 'ten', 'four'],
     maxtags=maxtags_sidebar,
     key="aljnf")
