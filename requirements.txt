@@ -3,6 +3,4 @@ streamlit_tags
 pyarrow
 keytotext
 opencv-python
-ffmpeg
-libsm6
-libxext6
+opencv-python-headless
