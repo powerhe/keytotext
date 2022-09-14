@@ -31,8 +31,8 @@ if st.sidebar.button('Load Model'):
     nlp=pipeline(option)
     st.sidebar.success("Load Successfully!")
 
-if st.button('Generate Text'):
-    out=nlp(keywords)
-    st.write(out)
+    if st.button('Generate Text'):
+        out=nlp(keywords)
+        st.write(out)
 
 st.write("## Results:")
